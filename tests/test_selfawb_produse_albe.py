@@ -33,6 +33,7 @@ def test_self_awb_incompatibilitate_optiuni(playwright: Playwright) -> None:
     page.get_by_role("button", name="Adauga din lista de").click()
     page.get_by_role("button", name="Adauga destinatar nou Introdu").click()
     page.get_by_role("button", name="Adauga din lista de").click()
+    page.wait_for_timeout(1500)
     page.get_by_role("checkbox").nth(2).check()
     
     page.get_by_role("button", name="Deschidere la livrare Ofera").click()
