@@ -31,7 +31,7 @@ pipeline {
     stage('Install Playwright') {
       steps {
         bat """
-          .venv\\Scripts\\python -m playwright install chromium
+          .venv\\Scripts\\python -m playwright install
         """
       }
     }

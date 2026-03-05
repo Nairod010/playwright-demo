@@ -7,9 +7,9 @@ def test_self_awb_standard(playwright: Playwright) -> None:
     video_dir = pathlib.Path("test-artifacts/videos")
     video_dir.mkdir(parents=True, exist_ok=True)
 
-    # browser = playwright.chromium.launch(headless=False)
+    # browser = playwright.chromium.launch(headless=True)
 
-    browser = playwright.firefox.launch(headless=False)
+    browser = playwright.firefox.launch(headless=True)
 
     context = browser.new_context(
         record_video_dir=str(video_dir),
