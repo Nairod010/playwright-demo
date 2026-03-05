@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://your-repo-url.git'
+                git 'https://github.com/Nairod010/playwright-demo.git'
             }
         }
 
