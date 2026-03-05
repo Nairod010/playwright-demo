@@ -5,7 +5,14 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Nairod010/playwright-demo.git'
+                checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: '*/master']],
+                        userRemoteConfigs: [[
+                        url: 'https://github.com/Nairod010/playwright-demo.git',
+                        credentialsId: 'github-pat'
+                    ]]
+                ])
             }
         }
 
